@@ -1,38 +1,60 @@
-.App {
+* {
   text-align: center;
+  background-color: #252A41;
+  color: white;
+  /* font-size: calc(10px + 2vmin); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  display: grid;
+  grid-column-gap: 10px;
+align-content: stretch;
+grid-auto-flow: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-welcomeSection{
+  grid-column: 1;
+  border: 2px solid white;
+}
+
+.App-resultSection {
+  grid-column: 2;
+  border: 2px solid white;
+  height: 70vw;
+}
+
+.App-nav {
+  width: 50px;
+  border: 2px solid white;
+  padding: 10px;
+  margin: 20px;
+  grid-template-columns: 5%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: left;
+  justify-content: left; */
 }
 
-.App-link {
-  color: #61dafb;
+
+.App-searchBar{
+  width: 600px;
+  align-self: center;
+  border: 2px solid white;
+  padding: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-projects {
+  border: 2px solid white;
+  width: 70vw;
+  height: 30vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
+
