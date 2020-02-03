@@ -1,5 +1,7 @@
 import React from "react";
 
-const Projects = () => <h1>Project</h1>;
+import ProjectPresentation from "../../components/Projects";
+
+const Projects = () => <ProjectPresentation />;
 
 export default Projects;

@@ -1,6 +1,11 @@
 import React from "react";
 // import styled from "styled-components";
 
-const ProjectItem = () => "ProjectItem";
+export interface Project {
+  id: string;
+  name: string;
+}
 
-export default ProjectItem;
+const Project = (project: Project) => <div>{project.name}</div>;
+
+export default Project;
