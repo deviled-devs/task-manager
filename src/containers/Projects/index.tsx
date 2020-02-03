@@ -1,5 +1,5 @@
 import React from "react";
 
-const Projects = () => "Projects";
+const Projects = () => <h1>Project</h1>;
 
 export default Projects;

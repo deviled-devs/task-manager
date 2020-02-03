@@ -1,5 +1,5 @@
 import React from "react";
 
-const Settings = () => "Settings";
+const Settings = () => <h1>Settings</h1>;
 
 export default Settings;
