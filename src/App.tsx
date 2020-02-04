@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Canvas from "./components/Common/Canvas";
+
+import Projects from "./containers/Projects";
+import Contacts from "./containers/Contacts";
+import Settings from "./containers/Settings";
+
+const app_theme = {
+  base: "#2b2e43",
+  paper: "#2f3247",
+  contrast: "#956ee5",
+  pattern: null,
+  font: "white",
+  fontContrast: "#4c4f61",
+  modified: null
+};
+
+const App = () => (
+  <ThemeProvider theme={app_theme}>
+    <Canvas>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Projects} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contacts" exact component={Contacts} />
+          <Route path="/settings" exact component={Settings} />
+        </Switch>
+      </Router>
+    </Canvas>
+  </ThemeProvider>
+);
 
 export default App;
