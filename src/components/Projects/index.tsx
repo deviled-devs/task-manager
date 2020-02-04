@@ -18,7 +18,11 @@ const Projects = () => {
           ]}
         />
       </Left>
-      <Right>tasks</Right>
+      <Right>
+        <div>Header</div>
+        <div>Today</div>
+        <div>Upcoming</div>
+      </Right>
     </Layout>
   );
 };
@@ -34,10 +38,16 @@ const Layout = styled.div`
 
 const Left = styled.div`
   padding: 4em;
+  display: grid;
+  grid-gap: 4em;
+  grid-template-rows: min-content;
 `;
 const Right = styled.div`
   background-color: ${({ theme }) => theme.font};
   color: ${({ theme }) => theme.base};
   border-radius: 20px;
   padding: 4em;
+  display: grid;
+  grid-gap: 4em;
+  grid-template-rows: min-content;
 `;
