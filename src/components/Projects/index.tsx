@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
+import TestFile from "../../testFile";
 
 const Projects = () => {
   return (
@@ -10,6 +11,7 @@ const Projects = () => {
       <Left>
         <div>Welcome</div>
         <div>Search</div>
+        <TestFile/>
         <ProjectList
           render={project => <ProjectItem key={project.id} {...project} />}
           data={[
