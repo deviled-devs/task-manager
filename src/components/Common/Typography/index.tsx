@@ -20,7 +20,7 @@ const Typography: FC<TypographyTypes> = ({
 	variant = 'p',
 	component,
 	align = 'inherit',
-	color = 'inherit',
+	contrast = false,
 	children
 }: TypographyTypes) => {
 	return (
@@ -28,7 +28,7 @@ const Typography: FC<TypographyTypes> = ({
 			variant={variant}
 			as={component ? component : getComponent(variant)}
 			align={align}
-			color={color}
+			contrast={contrast}
 		>
 			{children}
 		</StyledTypography>
@@ -83,7 +83,7 @@ const PStyles = css`
 
 const StyledTypography = styled.div<TypographyTypes>`
 	text-align: ${({ align }) => align};
-	color: ${({ color }) => color};
+	color: ${({ contrast, theme }) => contrast ? theme.fontContrast : theme.font};
 	${({ variant }) => variant === 'h1' && H1Styles}
 	${({ variant }) => variant === 'h2' && H2Styles}
 	${({ variant }) => variant === 'h3' && H3Styles}

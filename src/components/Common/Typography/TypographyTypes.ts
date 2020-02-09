@@ -14,12 +14,10 @@ interface TypoAlign {
 	| 'right'
 	| 'justify'
 }
-interface TypoColor {
-	color?: string
-}
 interface Props {
 	children: string
 	component?: any
+	contrast?: boolean
 }
 
-export default interface TypographyTypes extends TypoVariant, TypoAlign, TypoColor, Props { }
+export default interface TypographyTypes extends TypoVariant, TypoAlign, Props { }
