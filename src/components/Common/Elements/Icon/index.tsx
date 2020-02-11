@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { ReactComponent as ducky } from "./ducky.svg";
 import { ReactComponent as addressBook } from "./addressBook.svg";
+import { ReactComponent as search } from "./search.svg";
 import { ReactComponent as home } from "./home.svg";
 import { ReactComponent as sliders } from "./sliders.svg";
 import { ReactComponent as userCircle } from "./userCircle.svg";
