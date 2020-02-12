@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { ClientContextProvider } from 'react-fetching-library'
+import { Client } from './api/Client'
 
 import Canvas from "./components/Common/Canvas";
 
@@ -16,9 +18,9 @@ const app_theme = {
   fontContrast: "#4c4f61"
 };
 
-const App = () => {
-  return (
-    <ThemeProvider theme={app_theme}>
+const App = () => (
+  <ThemeProvider theme={app_theme}>
+    <ClientContextProvider client={Client}>
       <Canvas>
         <Router>
           <Switch>
@@ -29,7 +31,8 @@ const App = () => {
           </Switch>
         </Router>
       </Canvas>
-    </ThemeProvider>
-  );
-};
+    </ClientContextProvider>
+  </ThemeProvider>
+);
+
 export default App;
