@@ -1,5 +1,6 @@
 import React from "react";
+import SettingsPresentation from "../../components/Settings";
 
-const Settings = () => <h1>Settings</h1>;
+const Settings = () => <SettingsPresentation />;
 
 export default Settings;

@@ -14,10 +14,8 @@ const app_theme = {
   base: "#2b2e43",
   paper: "#2f3247",
   contrast: "#956ee5",
-  pattern: null,
   font: "white",
-  fontContrast: "#4c4f61",
-  modified: null
+  fontContrast: "#4c4f61"
 };
 
 const App = () => (
