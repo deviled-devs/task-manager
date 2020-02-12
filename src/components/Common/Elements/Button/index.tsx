@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 interface Props {
-  children: any;
+  children: ReactNode;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
