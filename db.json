@@ -1,0 +1,75 @@
+{
+	"projectList": [
+		{
+			"id": 1,
+			"title": "Project One"
+		},
+		{
+			"id": 2,
+			"title": "Project Two"
+		},
+		{
+			"id": 3,
+			"title": "Project Three"
+		}
+	],
+	"projects": [
+		{
+			"id": 1,
+			"title": "Project One",
+			"description": "This is the first project",
+			"tasklist": [
+				{
+					"id": 1,
+					"name": "Todo 1",
+					"isCompleted": false,
+					"status": "Approved"
+				},
+				{
+					"id": 2,
+					"name": "Todo 2",
+					"isCompleted": false,
+					"status": "Approved"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"title": "Project Two",
+			"description": "This is the second project",
+			"tasklist": [
+				{
+					"id": 1,
+					"name": "Todo 1",
+					"isCompleted": false,
+					"status": "Approved"
+				},
+				{
+					"id": 2,
+					"name": "Todo 2",
+					"isCompleted": false,
+					"status": "Approved"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"title": "Project Three",
+			"description": "This is the third project",
+			"tasklist": [
+				{
+					"id": 1,
+					"name": "Todo 1",
+					"isCompleted": false,
+					"status": "Approved"
+				},
+				{
+					"id": 2,
+					"name": "Todo 2",
+					"isCompleted": false,
+					"status": "Approved"
+				}
+			]
+		}
+	]
+}
