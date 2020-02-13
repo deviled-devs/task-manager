@@ -1,6 +1,10 @@
 import React from "react";
-import SettingsPresentation from "../../components/Settings";
+import Button from "../../components/Common/Elements/Button";
 
-const Settings = () => <SettingsPresentation />;
+const Settings = () => (
+  <h1>
+    <Button>hayy</Button>
+  </h1>
+);
 
 export default Settings;
