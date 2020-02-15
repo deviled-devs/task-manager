@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Project } from "../ProjectItem";
+import Typography from '../../Common/Elements/Typography'
 
 interface Props {
   render(project: Project): JSX.Element;
@@ -9,7 +10,14 @@ interface Props {
 }
 
 const ProjectList: React.SFC<Props> = ({ render, data }) => (
-  <Grid>{data.map(project => render(project))}</Grid>
+  <div>
+    <StyledHeader>
+      <Typography variant="h4">
+        Projects <StyledProjectsCount>({data.length})</StyledProjectsCount>
+      </Typography>
+    </StyledHeader>
+    <Grid>{data.map(project => render(project))}</Grid>
+  </div>
 );
 
 export default ProjectList;
@@ -18,3 +26,11 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 `;
+const StyledHeader = styled.div`
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1em;
+`
+const StyledProjectsCount = styled.span`
+  color: ${({ theme }) => theme.fontContrast};
+`
