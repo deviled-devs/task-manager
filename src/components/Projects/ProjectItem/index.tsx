@@ -43,6 +43,7 @@ const ProjectSquare = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: ${({ theme }) => theme.font};
   width: 100px;
   height: 100px;
   background-color: ${({ theme }) => theme.paper};
