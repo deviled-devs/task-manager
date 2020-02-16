@@ -25,7 +25,9 @@ export default ProjectList;
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.25rem;
+  column-gap: 2.25rem;
+  row-gap: 3.75rem;
+  color: #c4c4c4;
 `;
 const StyledHeader = styled.div`
   display: flex;
