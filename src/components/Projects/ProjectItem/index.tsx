@@ -11,12 +11,14 @@ export interface Project {
   isSelected?: boolean
 }
 
+const cardInitials = (string: string) => string.split(/\s/).reduce((acc, word) => acc += word.slice(0, 1), '')
+
 const Project = ({ id, name, onChange, value, isSelected }: Project) => (
   <ProjectItem>
     <HiddenInput name="projects" id={id} value={value} onChange={onChange} checked={isSelected} />
     <Label htmlFor={id}>
       <ProjectSquare>
-        <Typography variant="h3">{name}</Typography>
+        <Typography variant="h3">{cardInitials(name)}</Typography>
       </ProjectSquare>
       {name}
     </Label>
