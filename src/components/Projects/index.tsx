@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
+import Fab from "../Common/Elements/Fab/index";
 
 const Projects = () => {
   return (
@@ -22,6 +23,7 @@ const Projects = () => {
         <div>Header</div>
         <div>Today</div>
         <div>Upcoming</div>
+        <Fab/>
       </Right>
     </Layout>
   );
