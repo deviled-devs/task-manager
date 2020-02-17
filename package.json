@@ -18,7 +18,7 @@
     "react": "^16.12.0",
     "react-beautiful-dnd": "^12.2.0",
     "react-dom": "^16.12.0",
-    "react-fetching-library": "^1.5.14",
+    "react-fetching-library": "^1.5.15",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
