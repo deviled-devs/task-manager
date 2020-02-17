@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
+  const [selected, setSelected] = useState()
+  console.log('selected:', selected)
+
   return (
     <Layout>
       <Left>
         <div>Welcome</div>
         <div>Search</div>
         <ProjectList
-          render={project => <ProjectItem key={project.id} {...project} />}
+          render={project => <ProjectItem
+            key={project.id}
+            onChange={setSelected}
+            isSelected={selected === project.id}
+            {...project}
+          />}
           data={[
             { id: "123", name: "Project 1" },
             { id: "124", name: "Project 2" }
