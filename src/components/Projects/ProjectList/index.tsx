@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 import { Project } from "../ProjectItem";
@@ -9,7 +9,7 @@ interface Props {
   data: Array<Project>;
 }
 
-const ProjectList: React.SFC<Props> = ({ render, data }) => (
+const ProjectList: FC<Props> = ({ render, data }) => (
   <div>
     <StyledHeader>
       <Typography variant="h4">
