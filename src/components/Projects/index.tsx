@@ -22,7 +22,13 @@ const Projects = () => {
           />}
           data={[
             { id: "123", name: "Project 1" },
-            { id: "124", name: "Project 2" }
+            { id: "124", name: "Project 2" },
+            { id: "125", name: "Project 3" },
+            { id: "126", name: "Project 4" },
+            { id: "127", name: "Project 5" },
+            { id: "128", name: "Project 6" },
+            { id: "129", name: "Project 7" },
+            { id: "130", name: "Project 8" },
           ]}
         />
       </Left>
