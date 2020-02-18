@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-import { Project } from "../ProjectItem";
+import ProjectItem, { Project } from "../ProjectItem";
 import Typography from '../../Common/Elements/Typography'
 
 interface Props {
@@ -9,16 +9,30 @@ interface Props {
   data: Array<Project>;
 }
 
-const ProjectList: FC<Props> = ({ render, data }) => (
-  <div>
+const ProjectList: FC<Props> = ({ render, data }) => {
+  const itemsToShow = data.slice(0, 6)
+  const itemsToHide = data.slice(5)
+
+  return (<div>
     <StyledHeader>
       <Typography variant="h4">
         Projects <StyledProjectsCount>({data.length})</StyledProjectsCount>
       </Typography>
     </StyledHeader>
-    <Grid>{data.map(project => render(project))}</Grid>
-  </div>
-);
+    <Grid>
+      {itemsToShow.map((project, i, arr) => {
+        if (data.length > 6 && arr.length - 1 === i) {
+          return <ProjectItem
+            onChange={() => console.log(itemsToHide)}
+            id={'99'}
+            showMore={itemsToHide}
+          />
+        }
+        return render(project)
+      })}
+    </Grid>
+  </div>)
+};
 
 export default ProjectList;
 
