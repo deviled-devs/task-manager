@@ -5,29 +5,32 @@ import Typography from '../../Common/Elements/Typography'
 
 export interface Project {
   id: string;
-  name: string;
+  name?: string;
 }
 interface IProjectItem extends Project {
   onChange: Dispatch<any>
-  isSelected: boolean
+  isSelected?: boolean
+  showMore?: Project[]
 }
 
 const cardInitials = (string: string) => string.split(/\s/).reduce((acc, word) => acc += word.slice(0, 1), '')
 
-const Project = ({ id, name, onChange, isSelected }: IProjectItem) => {
+const Project = ({ id, name, onChange, isSelected, showMore }: IProjectItem) => {
   return (
     <ProjectItem>
       <HiddenInput
         name="projects"
         id={id}
-        onChange={() => onChange(id)}
+        onChange={() => onChange!(id)}
         checked={isSelected}
       />
       <Label htmlFor={id}>
         <ProjectSquare>
-          <Typography variant="h3">{cardInitials(name)}</Typography>
+          <Typography variant="h3">
+            {showMore ? `${showMore.length}+` : name && cardInitials(name)}
+          </Typography>
         </ProjectSquare>
-        {name}
+        {!showMore && name}
       </Label>
     </ProjectItem>
   )
