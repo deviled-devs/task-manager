@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
+import Welcome from "./Welcome/Welcome";
 
 const Projects = () => {
   return (
     <Layout>
       <Left>
-        <div>Welcome</div>
+        <div><Welcome/></div>
         <div>Search</div>
         <ProjectList
           render={project => <ProjectItem key={project.id} {...project} />}
