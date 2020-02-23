@@ -23,8 +23,9 @@ const ProjectList: FC<Props> = ({ render, data }) => {
       {itemsToShow.map((project, i, arr) => {
         if (data.length > 6 && arr.length - 1 === i) {
           return <ProjectItem
-            onChange={() => console.log(itemsToHide)}
-            id={'99'}
+            key="more"
+            onChange={() => console.log('Items hidden:', itemsToHide)}
+            id="more"
             showMore={itemsToHide}
           />
         }
