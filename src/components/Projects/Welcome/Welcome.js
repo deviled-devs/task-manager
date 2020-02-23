@@ -8,8 +8,8 @@ const Layout = styled.div`
   grid-gap: 1em;
 `;
 
-const P = styled.div`
-    color: C4C4C4;
+const P = styled.p`
+    color: #8A8C98;
 `;
 
 
