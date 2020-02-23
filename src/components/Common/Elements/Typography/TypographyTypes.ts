@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface TypoVariant {
 	variant?: 'h1'
 	| 'h2'
@@ -15,7 +17,7 @@ interface TypoAlign {
 	| 'justify'
 }
 interface Props {
-	children: string
+	children: ReactNode
 	component?: any
 	contrast?: boolean
 }

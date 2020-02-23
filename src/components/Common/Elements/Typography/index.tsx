@@ -38,7 +38,7 @@ const Typography: FC<TypographyTypes> = ({
 export default Typography
 
 const BaseStyles = css`
-	font-weight: normal;
+	font-weight: inherit;
 `
 
 const BaseHeaderStyles = css`
