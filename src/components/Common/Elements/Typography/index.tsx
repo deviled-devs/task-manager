@@ -21,7 +21,8 @@ const Typography: FC<TypographyTypes> = ({
 	component,
 	align = 'inherit',
 	contrast = false,
-	children
+	children,
+	className
 }: TypographyTypes) => {
 	return (
 		<StyledTypography
@@ -29,6 +30,7 @@ const Typography: FC<TypographyTypes> = ({
 			as={component ? component : getComponent(variant)}
 			align={align}
 			contrast={contrast}
+			className={className}
 		>
 			{children}
 		</StyledTypography>
