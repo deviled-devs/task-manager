@@ -18,6 +18,7 @@ interface Props {
 	children: string
 	component?: any
 	contrast?: boolean
+	className?: string
 }
 
 export default interface TypographyTypes extends TypoVariant, TypoAlign, Props { }
