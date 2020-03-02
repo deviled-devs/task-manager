@@ -8,6 +8,9 @@ import Projects from "./containers/Projects";
 import Contacts from "./containers/Contacts";
 import Settings from "./containers/Settings";
 
+import Firebase from "./firebase/Firebase";
+import { FirebaseContext } from "./firebase/FirebaseContext";
+
 const app_theme = {
   base: "#2b2e43",
   paper: "#2f3247",
@@ -17,18 +20,20 @@ const app_theme = {
 };
 
 const App = () => (
-  <ThemeProvider theme={app_theme}>
-    <Canvas>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Projects} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contacts" exact component={Contacts} />
-          <Route path="/settings" exact component={Settings} />
-        </Switch>
-      </Router>
-    </Canvas>
-  </ThemeProvider>
+  <FirebaseContext.Provider value={new Firebase()}>
+    <ThemeProvider theme={app_theme}>
+      <Canvas>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Projects} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contacts" exact component={Contacts} />
+            <Route path="/settings" exact component={Settings} />
+          </Switch>
+        </Router>
+      </Canvas>
+    </ThemeProvider>
+  </FirebaseContext.Provider>
 );
 
 export default App;

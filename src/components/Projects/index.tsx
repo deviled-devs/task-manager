@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+import { useFirebase } from "../../firebase/FirebaseContext";
+
 import ProjectList from "./ProjectList";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
+  const firebase = useFirebase();
+  // TODO: Query projects from firebase for <ProjectList /> data prop
+  console.log(firebase);
+
   return (
     <Layout>
       <Left>
